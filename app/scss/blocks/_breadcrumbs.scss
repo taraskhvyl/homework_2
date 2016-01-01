@@ -1,0 +1,29 @@
+.breadcrumbs{
+    
+    &-list{
+        padding: 32px 0;
+        margin: 0;
+        @include clearfix;
+    }
+    &-item{
+        float: left;
+        list-style: none;
+        &:before{
+            content: '>';
+            position: relative;
+            margin: 2px;
+        }
+        &:first-child:before{
+            display: none;
+        }
+    }
+    &-url{
+        color: #333;
+        text-decoration: none;
+        &_current{
+            color: #f60;
+            text-decoration: underline;
+        }
+    }
+    
+}

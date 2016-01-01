@@ -1,0 +1,330 @@
+body {
+  font-family: Opensans, sans-serif;
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+.wrapper {
+  overflow: hidden;
+  min-width: 1200px;
+  position: relative;
+  z-index: 999;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 45px;
+  box-sizing: border-box;
+}
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.page-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.heading-page {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* No files to import found in vendors/** */
+@font-face {
+  font-family: Opensans;
+  src: url("../fonts/opensans-bold-webfont.eot");
+  src: url("../fonts/opensans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-bold-webfont.woff") format("woff"), url("../fonts/opensans-bold-webfont.ttf") format("truetype"), url("../fonts/opensans-bold-webfont.svg#Opensans") format("svg");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: Opensans;
+  src: url("../fonts/opensans-regular-webfont.eot");
+  src: url("../fonts/opensans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-regular-webfont.woff") format("woff"), url("../fonts/opensans-regular-webfont.ttf") format("truetype"), url("../fonts/opensans-regular-webfont.svg#Opensans") format("svg");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: Opensans;
+  src: url("../fonts/opensans-semibold-webfont.eot");
+  src: url("../fonts/opensans-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-semibold-webfont.woff") format("woff"), url("../fonts/opensans-semibold-webfont.ttf") format("truetype"), url("../fonts/opensans-semibold-webfont.svg#Opensans") format("svg");
+  font-style: normal;
+  font-weight: 600;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.breadcrumbs-list {
+  padding: 32px 0;
+  margin: 0;
+}
+.breadcrumbs-list:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.breadcrumbs-item {
+  float: left;
+  list-style: none;
+}
+.breadcrumbs-item:before {
+  content: '>';
+  position: relative;
+  margin: 2px;
+}
+.breadcrumbs-item:first-child:before {
+  display: none;
+}
+.breadcrumbs-url {
+  color: #333;
+  text-decoration: none;
+}
+.breadcrumbs-url_current {
+  color: #f60;
+  text-decoration: underline;
+}
+
+.header {
+  padding: 25px 0;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 0 2px 0 #ebedef;
+}
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.header__social {
+  margin: 0;
+  padding: 0;
+}
+.header__social:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.header__social-item {
+  float: left;
+  width: 26px;
+  height: 26px;
+  margin-right: 15px;
+  border-radius: 50px;
+  background-color: #333;
+}
+.header__social-url {
+  display: block;
+  height: 100%;
+}
+
+.header__left {
+  float: left;
+}
+
+.header__social-item {
+  float: left;
+  text-indent: -9999px;
+}
+
+.header__right {
+  float: right;
+}
+.header__right:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.header__right-address {
+  display: inline-block;
+  vertical-align: middle;
+}
+.header__right-telephone {
+  font-size: 18px;
+  font-weight: 600;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 85px;
+}
+
+.main_nav {
+  background-color: #fff;
+  box-shadow: 0 2px 0 #ebedef;
+  display: block;
+}
+.main_nav:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.main_nav-list {
+  margin: 0;
+  padding: 0;
+}
+.main_nav-list:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.main_nav-item {
+  float: left;
+  list-style: none;
+}
+.main_nav-link {
+  font-size: 16px;
+  color: #333;
+  padding: 20px 15px;
+  display: block;
+  font-weight: 400;
+  text-decoration: none;
+}
+.main_nav-link:hover {
+  background-color: #e4e2e2;
+}
+.main_nav-link_active {
+  background-image: linear-gradient(34deg, #f60 0%, #ff6e35 99%, #ff6e35 100%);
+  font-weight: 600;
+  color: #fff;
+}
+
+.search {
+  padding: 34px 0;
+}
+.search:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.search__logo {
+  float: left;
+}
+.search__logo-url {
+  display: block;
+}
+.search__block {
+  float: left;
+  margin-left: 60px;
+}
+.search__block_submit {
+  height: 34px;
+  background-color: #f60;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -ms-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.search__block_submit:hover {
+  background-color: #ff8533;
+}
+.search__block_input {
+  width: 267px;
+  height: 34px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid #dee1e4;
+  border-radius: 3px;
+  color: #7f7f7f;
+  box-sizing: border-box;
+  font-weight: 300;
+  padding-left: 16px;
+  outline: none;
+  float: left;
+  -webkit-transition: border 0.3s;
+  -moz-transition: border 0.3s;
+  -ms-transition: border 0.3s;
+  -o-transition: border 0.3s;
+  transition: border 0.3s;
+}
+.search__block_input:hover, .search__block_input:focus {
+  border: 1px solid #8a959f;
+}
+.search__nav {
+  float: right;
+  margin-top: 5px;
+}
+.search__nav-list:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.search__nav-item {
+  float: left;
+  list-style: none;
+  margin-left: 32px;
+}
+.search__nav-link {
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: underline;
+  color: #333;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -ms-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.search__nav-link:hover {
+  color: #f60;
+}
+
+.sidebar {
+  float: left;
+  margin-top: 130px;
+  width: 333px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid #dee1e4;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.sidebar__heading {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.accordion {
+  overflow: hidden;
+}
+.accordion-section {
+  padding: 16px 30px;
+  border: 1px solid #dee1e4;
+}
+.accordion-section:first-child {
+  border-top: 0;
+}
+.accordion-section-title {
+  width: 100%;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+}
+.accordion-section-title.active {
+  text-decoration: none;
+}
+.accordion-section-content {
+  display: none;
+}

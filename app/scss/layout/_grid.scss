@@ -1,0 +1,29 @@
+body {
+    font-family: Opensans, sans-serif;
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+.wrapper {
+    overflow: hidden;
+    min-width: 1200px;
+    position: relative;
+    z-index: 999;
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 45px;
+    box-sizing: border-box;
+    @include clearfix;
+}
+.page-content{
+    @include clearfix;
+}
+.heading-page{
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+}

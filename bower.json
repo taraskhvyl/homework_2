@@ -1,0 +1,9 @@
+{
+  "name": "dz2",
+  "dependencies": {
+    "normalize-strings": "normalize#~1.0.4",
+    "jquery-ui": "~1.11.4",
+    "normalize-css": "~3.0.3",
+    "jquery": "~2.1.4"
+  }
+}

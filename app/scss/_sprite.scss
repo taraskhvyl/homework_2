@@ -1,0 +1,125 @@
+/*
+  SASS variables are information about icon's compiled state, stored under its original file name
+
+  .icon-home
+    width: $icon-home-width
+
+  The large array-like variables contain all information about a single icon
+  $icon-home: x y offset_x offset_y width height total_width total_height image_path
+
+  At the bottom of this section, we provide information about the spritesheet itself
+  $spritesheet: width height image $spritesheet-sprites
+  */
+$icon-facebook-name: 'icon-facebook'
+$icon-facebook-x: 34px
+$icon-facebook-y: 20px
+$icon-facebook-offset-x: -34px
+$icon-facebook-offset-y: -20px
+$icon-facebook-width: 6px
+$icon-facebook-height: 12px
+$icon-facebook-total-width: 48px
+$icon-facebook-total-height: 32px
+$icon-facebook-image: './img/sprite.png'
+$icon-facebook: (34px, 20px, -34px, -20px, 6px, 12px, 48px, 32px, './img/sprite.png', 'icon-facebook', )
+$icon-marker-name: 'icon-marker'
+$icon-marker-x: 0px
+$icon-marker-y: 0px
+$icon-marker-offset-x: 0px
+$icon-marker-offset-y: 0px
+$icon-marker-width: 12px
+$icon-marker-height: 16px
+$icon-marker-total-width: 48px
+$icon-marker-total-height: 32px
+$icon-marker-image: './img/sprite.png'
+$icon-marker: (0px, 0px, 0px, 0px, 12px, 16px, 48px, 32px, './img/sprite.png', 'icon-marker', )
+$icon-telephone-name: 'icon-telephone'
+$icon-telephone-x: 16px
+$icon-telephone-y: 0px
+$icon-telephone-offset-x: -16px
+$icon-telephone-offset-y: 0px
+$icon-telephone-width: 12px
+$icon-telephone-height: 16px
+$icon-telephone-total-width: 48px
+$icon-telephone-total-height: 32px
+$icon-telephone-image: './img/sprite.png'
+$icon-telephone: (16px, 0px, -16px, 0px, 12px, 16px, 48px, 32px, './img/sprite.png', 'icon-telephone', )
+$icon-twitter-name: 'icon-twitter'
+$icon-twitter-x: 32px
+$icon-twitter-y: 0px
+$icon-twitter-offset-x: -32px
+$icon-twitter-offset-y: 0px
+$icon-twitter-width: 16px
+$icon-twitter-height: 12px
+$icon-twitter-total-width: 48px
+$icon-twitter-total-height: 32px
+$icon-twitter-image: './img/sprite.png'
+$icon-twitter: (32px, 0px, -32px, 0px, 16px, 12px, 48px, 32px, './img/sprite.png', 'icon-twitter', )
+$icon-twitter-hover-name: 'icon-twitter_hover'
+$icon-twitter-hover-x: 0px
+$icon-twitter-hover-y: 20px
+$icon-twitter-hover-offset-x: 0px
+$icon-twitter-hover-offset-y: -20px
+$icon-twitter-hover-width: 16px
+$icon-twitter-hover-height: 12px
+$icon-twitter-hover-total-width: 48px
+$icon-twitter-hover-total-height: 32px
+$icon-twitter-hover-image: './img/sprite.png'
+$icon-twitter-hover: (0px, 20px, 0px, -20px, 16px, 12px, 48px, 32px, './img/sprite.png', 'icon-twitter_hover', )
+$icon-vkontakte-name: 'icon-vkontakte'
+$icon-vkontakte-x: 20px
+$icon-vkontakte-y: 20px
+$icon-vkontakte-offset-x: -20px
+$icon-vkontakte-offset-y: -20px
+$icon-vkontakte-width: 10px
+$icon-vkontakte-height: 12px
+$icon-vkontakte-total-width: 48px
+$icon-vkontakte-total-height: 32px
+$icon-vkontakte-image: './img/sprite.png'
+$icon-vkontakte: (20px, 20px, -20px, -20px, 10px, 12px, 48px, 32px, './img/sprite.png', 'icon-vkontakte', )
+$spritesheet-width: 48px
+$spritesheet-height: 32px
+$spritesheet-image: './img/sprite.png'
+$spritesheet-sprites: ($icon-facebook, $icon-marker, $icon-telephone, $icon-twitter, $icon-twitter-hover, $icon-vkontakte, )
+$spritesheet: (48px, 32px, './img/sprite.png', $spritesheet-sprites, )
+
+/*
+  The provided mixins are intended to be used with the array-like variables
+
+  .icon-home
+    @include sprite-width($icon-home)
+
+  .icon-email
+    @include sprite($icon-email)
+  */
+@mixin sprite-width($sprite)
+  width: nth($sprite, 5)
+
+@mixin sprite-height($sprite)
+  height: nth($sprite, 6)
+
+@mixin sprite-position($sprite)
+  $sprite-offset-x: nth($sprite, 3)
+  $sprite-offset-y: nth($sprite, 4)
+  background-position: $sprite-offset-x  $sprite-offset-y
+
+@mixin sprite-image($sprite)
+  $sprite-image: nth($sprite, 9)
+  background-image: url(#{$sprite-image})
+
+@mixin sprite($sprite)
+  @include sprite-image($sprite)
+  @include sprite-position($sprite)
+  @include sprite-width($sprite)
+  @include sprite-height($sprite)
+
+/*
+  The `sprites` mixin generates identical output to the CSS template
+    but can be overridden inside of SASS
+
+  @include sprites($spritesheet-sprites)
+  */
+@mixin sprites($sprites)
+  @each $sprite in $sprites
+    $sprite-name: nth($sprite, 10)
+    .#{$sprite-name}
+      @include sprite($sprite)

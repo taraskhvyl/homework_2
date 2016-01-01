@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Второе дз</title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/lib.min.css"/>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="wrapper">
+        <header class="header">
+          <div class="container">
+            <div class="header__left">
+              <ul class="header__social">
+                <li class="header__social-item"><a href="#" target="_blank" class="header__social-url">facebook</a></li>
+                <li class="header__social-item"><a href="#" target="_blank" class="header__social-url">vkontakte</a></li>
+                <li class="header__social-item"><a href="#" target="_blank" class="header__social-url">twitter</a></li>
+              </ul>
+            </div>
+            <div class="header__right">
+              <div class="header__right-address"><i class="sprite icon-marker"></i><span class="header__address">ул. Маяковская 6, офис 17</span></div>
+              <div class="header__right-telephone"><i class="sprite icon-tel"></i><span class="header__telephone">+7 (921) 123-12-13</span></div>
+            </div>
+          </div>
+        </header>
+        <div class="search">
+          <div class="container">
+            <div class="search__logo"><a href="/" class="search__logo-url"><img src="img/cooltech.png" alt="Логотип" width="237" height="35"/></a></div>
+            <div class="search__block">
+              <form action="">
+                <input type="text" name="text-search" placeholder="Что будем искать" class="search__block_input"/>
+                <button type="submit" class="search__block_submit">Найти </button>
+              </form>
+            </div>
+            <div class="search__nav">
+              <ul class="search__nav-list">
+                <li class="search__nav-item"><a href="/map" class="search__nav-link">Карта проезда</a></li>
+                <li class="search__nav-item"><a href="/history" class="search__nav-link">История заказов</a></li>
+                <li class="search__nav-item"><a href="/checkout" class="search__nav-link">Корзина</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <nav class="main_nav">
+          <div class="container">
+            <ul class="main_nav-list">
+              <li class="main_nav-item"><a href="#" class="main_nav-link">Планшеты</a></li>
+              <li class="main_nav-item"><a href="#" class="main_nav-link main_nav-link_active">Мобильные телефоны</a></li>
+              <li class="main_nav-item"><a href="#" class="main_nav-link">Mp3 плееры</a></li>
+              <li class="main_nav-item"><a href="#" class="main_nav-link">Персональные компьютеры</a></li>
+              <li class="main_nav-item"><a href="#" class="main_nav-link">Ноутбуки</a></li>
+              <li class="main_nav-item"><a href="#" class="main_nav-link">Аксессуары</a></li>
+              <li class="main_nav-item"><a href="#" class="main_nav-link">Бытовая техника</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="breadcrumbs">
+          <div class="container">
+            <ul class="breadcrumbs-list">
+              <li class="breadcrumbs-item"><a href="/" class="breadcrumbs-url">Главная</a></li>
+              <li class="breadcrumbs-item"><a href="#" class="breadcrumbs-url breadcrumbs-url_current">Каталог</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="heading">
+          <div class="container">
+            <h1 class="heading-page">Мобильные телефоны</h1>
+          </div>
+        </div>
+        <div class="page-content">
+          <div class="container">
+            <aside class="sidebar">
+              <div class="accordion">
+                <div class="accordion-section"><a href="#accordion-1" class="accordion-section-title">Наличие в магазинах</a>
+                  <div id="accordion-1" class="accordion-section-content">
+                    <ul class="availability-list">
+                      <li class="availability-item">
+                        <input type="radio" name="availability" id="all-shops" value="all-shops"/>
+                        <label for="all-shops" class="availability-text">Во всех магазинах</label>
+                      </li>
+                      <li class="availability-item">
+                        <input type="radio" name="availability" id="near-shop" value="near-shop"/>
+                        <label for="near-shop" class=".availability-text">В ближайшем ко мне магазине</label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+      <script src="js/lib.min.js"></script>
+      <script src="js/custom.js"></script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+nav.main_nav
+    .container
+        - var navUrls = ['Планшеты', 'Мобильные телефоны', 'Mp3 плееры', 'Персональные компьютеры', 'Ноутбуки', 'Аксессуары', 'Бытовая техника'];
+            ul.main_nav-list
+                each text, i  in navUrls
+                    li.main_nav-item
+                        a(href="#" class="main_nav-link" + ((i == 1) ? ' main_nav-link_active' : '')) #{text}
