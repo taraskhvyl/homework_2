@@ -1,22 +1,46 @@
 .sidebar{
     float: left;
-    margin-top: 130px;
     width: 333px;
-    background-color: rgba(255, 255, 255, 0.6);
-    border: 1px solid #dee1e4;
-    border-radius: 5px;
-    box-sizing: border-box;
-    &__heading{
-        font-size: 16px;
-        font-weight: 600;
+    overflow:hidden;
+    
+    &-filter {
+        display: block;
+        background-color: rgba(255, 255, 255, 0.6);
+        border: 1px solid #dee1e4;
+        border-radius: 5px;
+        margin-bottom: 40px;
+        margin-top: 30px;
+        &__item:first-child .sidebar-filter__url{
+            border-top: 0;
+        }
+        &__url {
+            color: #7f7f7f;
+            padding: 15px 30px;
+            display: block;
+            border-top: 1px solid #dee1e4;
+            
+            &:hover {
+                background-color: #d9e5ea;
+                color: #5d656c;
+            }
+        }
     }
 }
 
 
 .accordion {
-    overflow:hidden;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid #dee1e4;
+    border-radius: 5px;
+    box-sizing: border-box;
+    
+    &__heading{
+        font-size: 16px;
+        font-weight: 600;
+    }
+        
     &-section{
-        padding: 16px 30px;
+        padding: 0;
         border: 1px solid #dee1e4;
         
         &:first-child{
@@ -28,12 +52,263 @@
         display:inline-block;
         font-size: 16px;
         font-weight: 600;
-        
-        &.active{
+        padding: 16px 30px;
+        box-sizing: border-box;
+        position: relative;
+        &:hover {
+            background-color: #d9e5ea;
+            
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                right: 10px;
+                top: 20px;
+                @include sprite($widget-open);
+            }
+        }
+        &.active {
             text-decoration:none;
+            &:hover {
+                background-color: transparent;
+
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    right: 10px;
+                    top: 20px;
+                    @include sprite($widget-close);
+                }
+            }
         }
     }
-    &-section-content{
-        display:none;
+    &-section-content {
+        padding: 0 30px 16px;
+    }
+}
+
+// наличие в магазах
+.availability {
+    &-radio {
+        display: none;
+    }
+    &-item {
+        margin-top: 18px;
+        &:first-child{
+            margin-top: 0;
+        }
+    }
+    &-text{
+    
+        &:before{
+            content: "";
+            display: inline-block;
+            vertical-align: bottom;
+            margin-right: 10px;
+            @include sprite($radio);
+
+            width: 19px;
+            height: 19px;    
+
+            @include border-radius(50px);
+        }    
+        &:hover:before {
+            content: '';
+            display: inline-block;
+            @include sprite($radio-hover);
+        }
+    }
+    
+    &-radio:checked + &-text:before{
+        content: "";  
+        @include sprite($radio-checked);  
+        text-align: center;
+    }
+}
+
+
+// бренды
+
+.brand {
+    
+}
+
+// цена
+.price-slider{
+    margin-bottom: 15px;
+    
+    &__text {
+        color: rgb(51, 51, 51);
+        margin-right: 15px;
+    }
+    &__inputs {
+        margin-bottom: 20px;
+        @include clearfix;
+    }
+    &__from {
+        float: left;
+    }
+    &__to {
+        float: right;
+    }
+}
+.sliderValue{
+    width: 83px;
+    height: 30px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(235, 237, 239);
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px rgba(148, 148, 148, 0.43);
+    outline: none;
+    
+    &:focus,
+    &:hover{
+        border-color: #ccc;
+    }
+}
+.ui-widget-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.ui-slider {
+    position: relative;
+    text-align: left;
+}
+.ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    @include sprite($slider-marker);
+    cursor: default;
+    outline: none;
+    -ms-touch-action: none;
+    touch-action: none;
+}
+.ui-slider .ui-slider-range {
+    position: absolute;
+    z-index: 1;
+    background-color: rgb(255, 102, 0);
+    display: block;
+    border: 0;
+    background-position: 0 0;
+}
+
+/* support: IE8 - See #6727 */
+.ui-slider.ui-state-disabled .ui-slider-handle,
+.ui-slider.ui-state-disabled .ui-slider-range {
+    filter: inherit;
+}
+
+.ui-slider-horizontal {
+    height: 3px;
+    background-color: rgb(222, 225, 228);
+}
+.ui-slider-horizontal .ui-slider-handle {
+    top: 0;
+    margin-left: -4px;
+}
+.ui-slider-horizontal .ui-slider-range {
+    top: 0;
+    height: 100%;
+}
+.ui-slider-horizontal .ui-slider-range-min {
+    left: 0;
+}
+.ui-slider-horizontal .ui-slider-range-max {
+    right: 0;
+}
+
+.ui-slider-vertical {
+    width: .8em;
+    height: 100px;
+}
+.ui-slider-vertical .ui-slider-handle {
+    left: -.3em;
+    margin-left: 0;
+    margin-bottom: -.6em;
+}
+.ui-slider-vertical .ui-slider-range {
+    left: 0;
+    width: 100%;
+}
+.ui-slider-vertical .ui-slider-range-min {
+    bottom: 0;
+}
+.ui-slider-vertical .ui-slider-range-max {
+    top: 0;
+}
+
+
+// цвета
+
+.colors{
+    &-list{
+        margin-left: -20px;
+        @include clearfix;
+    }
+    &-link{
+        width: 37px;
+        height: 37px;
+        border: 1px solid rgb(222, 225, 228);
+        display: block;
+    }
+    &-item{
+        border: 2.5px solid transparent;
+        float: left;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        
+        &:hover {
+            border-color: lighten(#f60, 20%);  
+        }
+        &.active{
+            border-color: #f60;
+        }
+    }
+}
+
+// блок с чекбоксами
+
+.os,
+.brand{
+    &-item{
+        margin-top: 18px;
+
+        &:first-child{
+            margin-top: 0;
+        }
+    }
+
+    &-checkbox {
+        display: none;
+    }
+    &-text:before {
+        content: '';
+        display: inline-block;
+        vertical-align: bottom;
+        width: 19px;
+        height: 19px;
+        background-color: #dee1e4;
+        border-radius: 3px;
+        margin-right: 10px;
+    }
+    &-text:hover:before{
+        content: '';
+        @include sprite($checkbox-hover);
+    }
+    &-checkbox:checked + &-text:before{
+        content: '';
+        @include sprite($checkbox-checked);
+    }
+    &-reset{
+        color: #5db2fc;
+        text-decoration: underline;
+        margin-top: 18px;
+        cursor: pointer;
     }
 }

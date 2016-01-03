@@ -1,12 +1,59 @@
 aside.sidebar
+    .sidebar-filter
+        ul.sidebar-filter__list
+            li.sidebar-filter__item
+                a(href="#" class="sidebar-filter__url") Флагманы
+            li.sidebar-filter__item
+                a(href="#" class="sidebar-filter__url") Бюджетная линейка
     .accordion
         .accordion-section
-            a(href="#accordion-1" class="accordion-section-title") Наличие в магазинах
+            a(href="#accordion-1" class="accordion-section-title active") Наличие в магазинах
             #accordion-1.accordion-section-content
                 ul.availability-list
                     li.availability-item
-                        input(type="radio" name="availability" id="all-shops" value="all-shops") 
+                        input(type="radio" name="availability" class="availability-radio" id="all-shops" value="all-shops" checked) 
                         label(class="availability-text" for="all-shops") Во всех магазинах
                     li.availability-item
-                        input(type="radio" name="availability" id="near-shop" value="near-shop")
-                        label(class=".availability-text" for="near-shop") В ближайшем ко мне магазине
+                        input(type="radio" name="availability" class="availability-radio" id="near-shop" value="near-shop")
+                        label(class="availability-text" for="near-shop") В ближайшем ко мне магазине
+        .accordion-section
+            a(href="#accordion-2" class="accordion-section-title active") Бренды
+            #accordion-2.accordion-section-content
+                ul.brand-list
+                    - var brands = ['Lenovo', 'Apple', 'Samsung', 'Asus', 'Motorola']
+                        each item, i in brands
+                            li.brand-item
+                                input(type="checkbox" class="brand-checkbox" name="#{item}" id="#{item}")
+                                label(for="#{item}" class="brand-text") #{item}
+                .brand-reset Сбросить фильтр
+        .accordion-section
+            a(href="#accordion-3" class="accordion-section-title active") Цена
+            #accordion-3.accordion-section-content
+                .price-slider
+                    .price-slider__inputs
+                        .price-slider__from
+                            span.price-slider__text от
+                            input(type="text" class="sliderValue" data-index="0" value="100")
+                        .price-slider__to
+                            span.price-slider__text до
+                            input(type="text" class="sliderValue" data-index="1" value="13000")
+                    .price-slider__slider
+                        #slider
+        .accordion-section
+            a(href="#accordion-4" class="accordion-section-title active") Цвет
+            #accordion-4.accordion-section-content
+                ul.colors-list
+                    - var colors = ['fff', 'ccc', '000', '0a3153', 'ff1800', 'fff343', 'fb914a', '92c37c', '40a6ff', '9870ad', 'dc78ad', '7f401d'];
+                        each item in colors
+                            li(class="colors-item")
+                                a(href="#" class="colors-link" style="background-color: #" + item)
+        .accordion-section
+            a(href="#accordion-5" class="accordion-section-title active") Операционные системы
+            #accordion-5.accordion-section-content
+                ul.os-list
+                    - var os = ['Android', 'iOS', 'Windows Mobile', 'Symbian', 'Custom']
+                        each item, i in os
+                            li.os-item
+                                input(type="checkbox" class="os-checkbox" name="#{item}" id="#{item}")
+                                label(for="#{item}" class="os-text") #{item}
+                .os-reset Сбросить фильтр

@@ -1,0 +1,112 @@
+.information {
+    clear: both;
+    margin-top: 35px;
+    text-align: justify;
+    
+    &__heading{
+        margin-top: 0;
+        margin-bottom: 14px;
+    }
+    p {
+        margin: 14px 0;
+    }
+    &__content {
+        padding-bottom: 16px;
+    }
+    &__content .first {
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+    &__content .last {
+        padding-left: 20px;
+        box-sizing: border-box;
+    }
+}
+
+.footer {
+    background: url('../img/footer-bg.jpg') no-repeat center;
+    background-size: cover;
+    padding-top: 35px;
+    
+    &__logo {
+        float: left;
+        margin-top: 35px;
+    }
+    &__navs{
+        float: right;
+        width: 55%;
+        
+        &_social {
+            @include clearfix;
+            &-list {
+                float: right;
+                @include clearfix;
+            }
+            &-item {
+                float: left;
+                width: 43px;
+                height: 43px;
+                background-color: #fff;
+                border-radius: 50px;
+                position: relative;
+                margin-left: 25px;
+
+                a {
+                    display: block; 
+                    height: 100%;
+                    @include hide-text;
+
+                    i {
+                        display: block;
+                        @include center;
+                    }
+                }
+            }
+        }
+        
+        &_menu{
+            margin-top: 32px;
+            @include clearfix;
+            
+            &-list {
+                @include clearfix;
+                text-align: right;
+            }
+            
+            &-item {
+                display: inline-block;
+                line-height: 36px;
+                margin-left: 25px;
+            }
+            &-url {
+                text-decoration: underline;
+                color: #fff;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    &__icon-facebook {
+        @include sprite($footer-facebook);
+    }
+    &__icon-vkontakte {
+        @include sprite($footer-vkontakte);
+    }
+    &__icon-twitter {
+        @include sprite($footer-twitter);
+    }
+    
+    &__line {
+        height: 1px;
+        background-color: #494949;
+        width: 100%;
+        margin-top: 20px;
+    }
+    &__bottom {
+        text-align: center;
+        color: #fff;
+        font-size: 12px;
+        padding: 7px;
+    }
+}

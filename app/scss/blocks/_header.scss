@@ -21,6 +21,34 @@
         &-url{
             display: block;
             height: 100%;
+            position: relative;
+            & i {
+                @include center;
+            }
+        }
+        &-facebook{
+            i {
+                @include sprite($facebook);
+            }
+            &:hover i {
+                @include sprite($facebook-hover);
+            }
+        }
+        &-vkontakte{
+            i {
+            @include sprite($vkontakte);
+            }
+            &:hover i {
+                @include sprite($vkontakte-hover);
+            }
+        }
+        &-twitter {
+            i {
+                @include sprite($twitter);
+            }
+            &:hover i{
+                @include sprite($twitter-hover);
+            }
         }
     }
     
@@ -40,7 +68,18 @@
         display: inline-block;
         vertical-align: middle;
     }
-    
+    .header__icon-tel{
+        @include sprite($telephone);
+        display: inline-block;
+        vertical-align: center;
+        margin-right: 10px;
+    }
+    .header__icon-marker{
+        @include sprite($marker);
+        display: inline-block;
+        vertical-align: bottom;
+        margin-right: 10px;
+    }
     &-telephone{
         font-size: 18px;
         font-weight: 600;

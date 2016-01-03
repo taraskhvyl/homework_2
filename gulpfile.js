@@ -35,7 +35,8 @@ input = {
     'imgPNG' : 'app/img/**/*.png',
     'imgJPG' : 'app/img/**/*.jpg',
     'imgSprites' : 'app/img/sprites/*.*',
-    'mainBower' : 'app/mainBower/'
+    'mainBower' : 'app/mainBower/',
+    'cssVendors' : 'app/css/vendors/*.css'
 },
     
 middle = {
@@ -139,15 +140,11 @@ gulp.task('sprites', function() {
             .pipe(spritesmith({
                 imgName: 'sprite.png',
                 cssName: '_sprite.scss',
-                imgPath: './img/sprite.png',//Путь прописаный в CSS как Background-image
-                cssFormat: 'sass',
+                imgPath: '../img/sprite.png',//Путь прописаный в CSS как Background-image
+                cssFormat: 'scss',
                 padding: 4,
                 algorithm: 'binary-tree',
-                cssVarMap: function(sprite) {
-                    sprite.name = 'icon-' + sprite.name
-                }
             }));
-
     spriteData.img.pipe(gulp.dest(middle.images)); // путь, куда сохраняем картинку
     spriteData.css.pipe(gulp.dest('app/scss')); // путь, куда сохраняем стили
 });
@@ -155,7 +152,7 @@ gulp.task('sprites', function() {
 
 /*
 # ==============================================
-# Собирает все главные файлы с bower
+# Собирает все главные файлы с bower и минимизирует все скрипты
 # ==============================================
 */
 gulp.task('mainbowerjs', function () {
@@ -163,9 +160,16 @@ gulp.task('mainbowerjs', function () {
     return gulp.src('./bower.json')
         .pipe(mainBowerFiles())
         .pipe(filterJS)
-        .pipe(concat('lib.min.js'))
         .pipe(uglify())
+        .pipe(concat('bowerlib.min.js'))
+        
         //.pipe(filterJS.restore) // закинуть файлы, которые обработались в папку
+        .pipe(gulp.dest(middle.jslibs));
+});
+gulp.task('vendorjs', function () {
+    return gulp.src('app/js/vendor/*.js')
+        .pipe(uglify())
+        .pipe(concat('vendors.min.js'))
         .pipe(gulp.dest(middle.jslibs));
 });
 gulp.task('mainbowercss', function () {
@@ -178,24 +182,42 @@ gulp.task('mainbowercss', function () {
         //.pipe(filterCSS.restore) // закинуть файлы, которые обработались в папку
         .pipe(gulp.dest(middle.csslibs));
 });
+gulp.task('vendorcss', function () {
+    return gulp.src(input.cssVendors)
+        .pipe(concat('vendors.min.css'))
+        .pipe(minify())
+        .pipe(gulp.dest(middle.csslibs));
+});
 
-gulp.task('mainbower', ['mainbowerjs','mainbowercss']);
+gulp.task('mainbower', ['mainbowerjs','mainbowercss', 'vendorjs', 'vendorcss']);
 /*    
 # ===============================================
-# Убираем лишний код CSS
+# Уменьшаем ксс для конечной сборки
 # ===============================================
 */
-gulp.task('uncss', function() {
+gulp.task('mincss', function() {
     return gulp.src(middle.css)
-        .pipe(uncss({
-            html: [output.html]
-        }))
+        .pipe(concat('all.min.css'))
         .pipe(minify())
-		.pipe(rename({
-            suffix: '.min'
-        }))
         .pipe(gulp.dest(output.css));
-    ;
+});
+
+/*    
+# ===============================================
+# Переносим нужные файлы
+# ===============================================
+*/
+gulp.task('destfonts', function() {
+    return gulp.src('app/fonts/*.*')
+        .pipe(gulp.dest('dist/fonts/'));
+});
+gulp.task('destjs', function() {
+    return gulp.src('app/js/*.*')
+        .pipe(gulp.dest('dist/js/'));
+});
+gulp.task('desthtml', function() {
+    return gulp.src('app/*.html')
+        .pipe(gulp.dest('dist/'));
 });
 /*
 # ===============================================
@@ -206,7 +228,9 @@ gulp.task('watch', function() {
 	gulp.watch(input.jade, ['jade']);
     gulp.watch(input.sassAll, ['compass']);
     gulp.watch(input.imgSprites, ['sprites']);
+    gulp.watch(input.cssVendors, ['vendorcss', 'bs-reload']);
+    gulp.watch(input.jsVendor, ['vendorjs', 'bs-reload']);
 });
 
 gulp.task('default', ['jade','compass','sprites','browser-sync', 'watch']);
-gulp.task('prod', ['pngopt','jpgopt','uncss']);
+gulp.task('prod', ['pngopt','jpgopt','mincss', 'destfonts', 'destjs', 'desthtml']);
