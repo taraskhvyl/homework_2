@@ -3,6 +3,7 @@
 # Установка
 #### Способ 1 (с установкой плагинов)
 Вам нужен Gulp, установленный глобально
+Вам нужен Compass
 ```sh
 1. git clone https://github.com/taraskhvyl/homework_1.git shop
 2. cd shop
