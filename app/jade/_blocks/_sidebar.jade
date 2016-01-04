@@ -2,7 +2,7 @@ aside.sidebar
     .sidebar-filter
         ul.sidebar-filter__list
             li.sidebar-filter__item
-                a(href="#" class="sidebar-filter__url") Флагманы
+                a(href="#" class="sidebar-filter__url active") Флагманы
             li.sidebar-filter__item
                 a(href="#" class="sidebar-filter__url") Бюджетная линейка
     .accordion
@@ -54,6 +54,6 @@ aside.sidebar
                     - var os = ['Android', 'iOS', 'Windows Mobile', 'Symbian', 'Custom']
                         each item, i in os
                             li.os-item
-                                input(type="checkbox" class="os-checkbox" name="#{item}" id="#{item}")
-                                label(for="#{item}" class="os-text") #{item}
+                                input(type="checkbox" class="os-checkbox" name="#{item}" id="os_#{i}")
+                                label(for="os_#{i}" class="os-text") #{item}
                 .os-reset Сбросить фильтр

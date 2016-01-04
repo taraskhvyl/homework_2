@@ -26,4 +26,9 @@ body {
     font-size: 20px;
     font-weight: 700;
     margin: 0;
+    margin-bottom: 30px;
+}
+
+.hide-text {
+    @include hide-text;
 }

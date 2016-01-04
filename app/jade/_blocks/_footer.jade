@@ -12,19 +12,16 @@
 footer.footer
     .container
         .footer__logo
-            img(src="img/footer-logo.png", alt="Лого")
+            img(src="img/footer-logo.png", class="footer__logo_image", alt="Лого")
         .footer__navs
             .footer__navs_social
                 ul.footer__navs_social-list
                     li.footer__navs_social-item
-                        a(href="#" class="footer-facebook") Фейсбук
-                            i.footer__icon-facebook
+                        a(href="#" class="footer__navs_url footer-facebook") Фейсбук
                     li.footer__navs_social-item
-                        a(href="#" class="footer-vkontakte") Вконтакте
-                            i.footer__icon-vkontakte
+                        a(href="#" class="footer__navs_url footer-vkontakte") Вконтакте
                     li.footer__navs_social-item
-                        a(href="#" class="footer-twitter") Твиттер
-                            i.footer__icon-twitter
+                        a(href="#" class="footer__navs_url footer-twitter") Твиттер
             .footer__navs_menu
                 -var footerNav = ['Планшеты', 'Мобильные телефоны', 'Mp3 плееры', 'Персональные компьютеры', 'Ноутбуки', 'Аксессуары', 'Бытовая техника'];
                 ul.footer__navs_menu-list

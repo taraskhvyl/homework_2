@@ -2,10 +2,25 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8"/>
-    <title>Второе дз</title>
-    <link rel="stylesheet" href="css/vendors.min.css"/>
-    <link rel="stylesheet" href="css/lib.min.css"/>
-    <link rel="stylesheet" href="css/main.css"/>
+    <title>Мобильные телефоны - COOLTECH</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png"/>
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png"/>
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png"/>
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png"/>
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png"/>
+    <link rel="manifest" href="img/favicon/manifest.json"/>
+    <meta name="msapplication-TileColor" content="#ffffff"/>
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png"/>
+    <meta name="theme-color" content="#ffffff"/>
+    <link rel="stylesheet" href="css/all.min.css"/>
   </head>
   <body>
     <div class="wrapper">
@@ -14,22 +29,22 @@
           <div class="container">
             <div class="header__left">
               <ul class="header__social">
-                <li class="header__social-item"><a href="#" target="_blank" class="header__social-url header__social-facebook">facebook<i></i></a></li>
-                <li class="header__social-item"><a href="#" target="_blank" class="header__social-url header__social-vkontakte">vkontakte<i></i></a></li>
-                <li class="header__social-item"><a href="#" target="_blank" class="header__social-url header__social-twitter">twitter<i></i></a></li>
+                <li class="header__social-item"><a href="#" target="_blank" class="header__social-url header__social-facebook"> <span class="hide-text">facebook</span></a></li>
+                <li class="header__social-item"><a href="#" target="_blank" class="header__social-url header__social-vkontakte"><span class="hide-text">vkontakte</span></a></li>
+                <li class="header__social-item"><a href="#" target="_blank" class="header__social-url header__social-twitter"><span class="hide-text">twitter</span></a></li>
               </ul>
             </div>
             <div class="header__right">
-              <div class="header__right-address"><i class="header__icon-marker"></i><span class="header__address">ул. Маяковская 6, офис 17</span></div>
-              <div class="header__right-telephone"><i class="header__icon-tel"></i><span class="header__telephone">+7 (921) 123-12-13</span></div>
+              <div class="header__right-address"><span class="header__address">ул. Маяковская 6, офис 17</span></div>
+              <div class="header__right-telephone"><span class="header__telephone">+7 (921) 123-12-13</span></div>
             </div>
           </div>
         </header>
         <div class="search">
           <div class="container">
-            <div class="search__logo"><a href="/" class="search__logo-url"><img src="img/cooltech.png" alt="Логотип" width="237" height="35"/></a></div>
+            <div class="search__logo"><a href="/" class="search__logo-url"><img src="img/cooltech.png" alt="Логотип" class="search__logo-img"/></a></div>
             <div class="search__block">
-              <form action="">
+              <form action="#">
                 <input type="text" name="text-search" placeholder="Что будем искать" class="search__block_input"/>
                 <button type="submit" class="search__block_submit">Найти </button>
               </form>
@@ -64,18 +79,14 @@
             </ul>
           </div>
         </div>
-        <div class="heading">
-          <div class="container">
-            <h1 class="heading-page">Мобильные телефоны</h1>
-          </div>
-        </div>
         <div class="page-content">
           <div class="container">
+            <h1 class="heading-page">Мобильные телефоны</h1>
             <div class="content">
               <aside class="sidebar">
                 <div class="sidebar-filter">
                   <ul class="sidebar-filter__list">
-                    <li class="sidebar-filter__item"><a href="#" class="sidebar-filter__url">Флагманы</a></li>
+                    <li class="sidebar-filter__item"><a href="#" class="sidebar-filter__url active">Флагманы</a></li>
                     <li class="sidebar-filter__item"><a href="#" class="sidebar-filter__url">Бюджетная линейка</a></li>
                   </ul>
                 </div>
@@ -160,24 +171,24 @@
                     <div id="accordion-5" class="accordion-section-content">
                       <ul class="os-list">
                         <li class="os-item">
-                          <input type="checkbox" name="Android" id="Android" class="os-checkbox"/>
-                          <label for="Android" class="os-text">Android</label>
+                          <input type="checkbox" name="Android" id="os_0" class="os-checkbox"/>
+                          <label for="os_0" class="os-text">Android</label>
                         </li>
                         <li class="os-item">
-                          <input type="checkbox" name="iOS" id="iOS" class="os-checkbox"/>
-                          <label for="iOS" class="os-text">iOS</label>
+                          <input type="checkbox" name="iOS" id="os_1" class="os-checkbox"/>
+                          <label for="os_1" class="os-text">iOS</label>
                         </li>
                         <li class="os-item">
-                          <input type="checkbox" name="Windows Mobile" id="Windows Mobile" class="os-checkbox"/>
-                          <label for="Windows Mobile" class="os-text">Windows Mobile</label>
+                          <input type="checkbox" name="Windows Mobile" id="os_2" class="os-checkbox"/>
+                          <label for="os_2" class="os-text">Windows Mobile</label>
                         </li>
                         <li class="os-item">
-                          <input type="checkbox" name="Symbian" id="Symbian" class="os-checkbox"/>
-                          <label for="Symbian" class="os-text">Symbian</label>
+                          <input type="checkbox" name="Symbian" id="os_3" class="os-checkbox"/>
+                          <label for="os_3" class="os-text">Symbian</label>
                         </li>
                         <li class="os-item">
-                          <input type="checkbox" name="Custom" id="Custom" class="os-checkbox"/>
-                          <label for="Custom" class="os-text">Custom</label>
+                          <input type="checkbox" name="Custom" id="os_4" class="os-checkbox"/>
+                          <label for="os_4" class="os-text">Custom</label>
                         </li>
                       </ul>
                       <div class="os-reset">Сбросить фильтр</div>
@@ -202,7 +213,7 @@
                     <li class="products-item">
                       <div class="product-info__left">
                         <div class="products-slider">
-                          <div class="products-slider__main-thumbnail"><img src="img/tel-big-1.png" alt="Samsung"/></div>
+                          <div class="products-slider__main-thumbnail"><img src="img/tel-big-1.png" alt="Samsung" class="products-slider__main-thumbnail_img"/></div>
                           <div class="products-slider__other-images">
                             <div class="products-slider__thumbnail active"><img src="img/tel-small-1.png" alt="Миниатюра 1" data-big="img/tel-big-1.png"/></div>
                             <div class="products-slider__thumbnail"><img src="img/tel-small-2.png" alt="Миниатюра 2" data-big="img/tel-big-2.png"/></div>
@@ -213,7 +224,7 @@
                       </div>
                       <div class="product-charact">
                         <div class="products-filter_rows_name">Смартфон</div>
-                        <div class="products-title">Samsung GT-I9301I GALAXY S 3</div>
+                        <h4 class="products-title"> <a href="#" class="products-title__url">Samsung GT-I9301I GALAXY S 3</a></h4>
                         <div class="products-info">
                           <div class="products-info__row">
                             <div class="products-info__row_left">Тип SIM-карты</div>
@@ -261,14 +272,14 @@
                           <div class="products-buy">
                             <input type="submit" value="В корзину" class="products-buy__button"/>
                           </div>
-                          <div class="products-availability"><i class="products-available"></i><span class="products-availability-text">В наличии</span></div>
+                          <div class="products-availability"><span class="products-availability-text">В наличии</span></div>
                         </div>
                       </div>
                     </li>
                     <li class="products-item">
                       <div class="product-info__left">
                         <div class="products-slider">
-                          <div class="products-slider__main-thumbnail"><img src="img/tel-big-1.png" alt="Samsung"/></div>
+                          <div class="products-slider__main-thumbnail"><img src="img/tel-big-1.png" alt="Samsung" class="products-slider__main-thumbnail_img"/></div>
                           <div class="products-slider__other-images">
                             <div class="products-slider__thumbnail active"><img src="img/tel-small-1.png" alt="Миниатюра 1" data-big="img/tel-big-1.png"/></div>
                             <div class="products-slider__thumbnail"><img src="img/tel-small-2.png" alt="Миниатюра 2" data-big="img/tel-big-2.png"/></div>
@@ -279,7 +290,7 @@
                       </div>
                       <div class="product-charact">
                         <div class="products-filter_rows_name">Смартфон</div>
-                        <div class="products-title">Samsung GT-I9301I GALAXY S 3</div>
+                        <h4 class="products-title"> <a href="#" class="products-title__url">Samsung GT-I9301I GALAXY S 3</a></h4>
                         <div class="products-info">
                           <div class="products-info__row">
                             <div class="products-info__row_left">Тип SIM-карты</div>
@@ -327,14 +338,14 @@
                           <div class="products-buy">
                             <input type="submit" value="В корзину" class="products-buy__button"/>
                           </div>
-                          <div class="products-availability"><i class="products-available"></i><span class="products-availability-text">В наличии</span></div>
+                          <div class="products-availability"><span class="products-availability-text">В наличии</span></div>
                         </div>
                       </div>
                     </li>
                     <li class="products-item">
                       <div class="product-info__left">
                         <div class="products-slider">
-                          <div class="products-slider__main-thumbnail"><img src="img/tel-big-1.png" alt="Samsung"/></div>
+                          <div class="products-slider__main-thumbnail"><img src="img/tel-big-1.png" alt="Samsung" class="products-slider__main-thumbnail_img"/></div>
                           <div class="products-slider__other-images">
                             <div class="products-slider__thumbnail active"><img src="img/tel-small-1.png" alt="Миниатюра 1" data-big="img/tel-big-1.png"/></div>
                             <div class="products-slider__thumbnail"><img src="img/tel-small-2.png" alt="Миниатюра 2" data-big="img/tel-big-2.png"/></div>
@@ -345,7 +356,7 @@
                       </div>
                       <div class="product-charact">
                         <div class="products-filter_rows_name">Смартфон</div>
-                        <div class="products-title">Samsung GT-I9301I GALAXY S 3</div>
+                        <h4 class="products-title"> <a href="#" class="products-title__url">Samsung GT-I9301I GALAXY S 3</a></h4>
                         <div class="products-info">
                           <div class="products-info__row">
                             <div class="products-info__row_left">Тип SIM-карты</div>
@@ -393,14 +404,14 @@
                           <div class="products-buy">
                             <input type="submit" value="В корзину" class="products-buy__button"/>
                           </div>
-                          <div class="products-availability"><i class="products-available"></i><span class="products-availability-text">В наличии</span></div>
+                          <div class="products-availability"><span class="products-availability-text">В наличии</span></div>
                         </div>
                       </div>
                     </li>
                     <li class="products-item">
                       <div class="product-info__left">
                         <div class="products-slider">
-                          <div class="products-slider__main-thumbnail"><img src="img/tel-big-1.png" alt="Samsung"/></div>
+                          <div class="products-slider__main-thumbnail"><img src="img/tel-big-1.png" alt="Samsung" class="products-slider__main-thumbnail_img"/></div>
                           <div class="products-slider__other-images">
                             <div class="products-slider__thumbnail active"><img src="img/tel-small-1.png" alt="Миниатюра 1" data-big="img/tel-big-1.png"/></div>
                             <div class="products-slider__thumbnail"><img src="img/tel-small-2.png" alt="Миниатюра 2" data-big="img/tel-big-2.png"/></div>
@@ -411,7 +422,7 @@
                       </div>
                       <div class="product-charact">
                         <div class="products-filter_rows_name">Смартфон</div>
-                        <div class="products-title">Samsung GT-I9301I GALAXY S 3</div>
+                        <h4 class="products-title"> <a href="#" class="products-title__url">Samsung GT-I9301I GALAXY S 3</a></h4>
                         <div class="products-info">
                           <div class="products-info__row">
                             <div class="products-info__row_left">Тип SIM-карты</div>
@@ -459,14 +470,14 @@
                           <div class="products-buy">
                             <input type="submit" value="В корзину" class="products-buy__button"/>
                           </div>
-                          <div class="products-availability"><i class="products-available"></i><span class="products-availability-text">В наличии</span></div>
+                          <div class="products-availability"><span class="products-availability-text">В наличии</span></div>
                         </div>
                       </div>
                     </li>
                     <li class="products-item">
                       <div class="product-info__left">
                         <div class="products-slider">
-                          <div class="products-slider__main-thumbnail"><img src="img/tel-big-1.png" alt="Samsung"/></div>
+                          <div class="products-slider__main-thumbnail"><img src="img/tel-big-1.png" alt="Samsung" class="products-slider__main-thumbnail_img"/></div>
                           <div class="products-slider__other-images">
                             <div class="products-slider__thumbnail active"><img src="img/tel-small-1.png" alt="Миниатюра 1" data-big="img/tel-big-1.png"/></div>
                             <div class="products-slider__thumbnail"><img src="img/tel-small-2.png" alt="Миниатюра 2" data-big="img/tel-big-2.png"/></div>
@@ -477,7 +488,7 @@
                       </div>
                       <div class="product-charact">
                         <div class="products-filter_rows_name">Смартфон</div>
-                        <div class="products-title">Samsung GT-I9301I GALAXY S 3</div>
+                        <h4 class="products-title"> <a href="#" class="products-title__url">Samsung GT-I9301I GALAXY S 3</a></h4>
                         <div class="products-info">
                           <div class="products-info__row">
                             <div class="products-info__row_left">Тип SIM-карты</div>
@@ -525,14 +536,14 @@
                           <div class="products-buy">
                             <input type="submit" value="В корзину" class="products-buy__button"/>
                           </div>
-                          <div class="products-availability"><i class="products-available"></i><span class="products-availability-text">В наличии</span></div>
+                          <div class="products-availability"><span class="products-availability-text">В наличии</span></div>
                         </div>
                       </div>
                     </li>
                     <li class="products-item">
                       <div class="product-info__left">
                         <div class="products-slider">
-                          <div class="products-slider__main-thumbnail"><img src="img/tel-big-1.png" alt="Samsung"/></div>
+                          <div class="products-slider__main-thumbnail"><img src="img/tel-big-1.png" alt="Samsung" class="products-slider__main-thumbnail_img"/></div>
                           <div class="products-slider__other-images">
                             <div class="products-slider__thumbnail active"><img src="img/tel-small-1.png" alt="Миниатюра 1" data-big="img/tel-big-1.png"/></div>
                             <div class="products-slider__thumbnail"><img src="img/tel-small-2.png" alt="Миниатюра 2" data-big="img/tel-big-2.png"/></div>
@@ -543,7 +554,7 @@
                       </div>
                       <div class="product-charact">
                         <div class="products-filter_rows_name">Смартфон</div>
-                        <div class="products-title">Samsung GT-I9301I GALAXY S 3</div>
+                        <h4 class="products-title"> <a href="#" class="products-title__url">Samsung GT-I9301I GALAXY S 3</a></h4>
                         <div class="products-info">
                           <div class="products-info__row">
                             <div class="products-info__row_left">Тип SIM-карты</div>
@@ -591,14 +602,14 @@
                           <div class="products-buy">
                             <input type="submit" value="В корзину" class="products-buy__button"/>
                           </div>
-                          <div class="products-availability"><i class="products-available"></i><span class="products-availability-text">В наличии</span></div>
+                          <div class="products-availability"><span class="products-availability-text">В наличии</span></div>
                         </div>
                       </div>
                     </li>
                     <li class="products-item">
                       <div class="product-info__left">
                         <div class="products-slider">
-                          <div class="products-slider__main-thumbnail"><img src="img/tel-big-1.png" alt="Samsung"/></div>
+                          <div class="products-slider__main-thumbnail"><img src="img/tel-big-1.png" alt="Samsung" class="products-slider__main-thumbnail_img"/></div>
                           <div class="products-slider__other-images">
                             <div class="products-slider__thumbnail active"><img src="img/tel-small-1.png" alt="Миниатюра 1" data-big="img/tel-big-1.png"/></div>
                             <div class="products-slider__thumbnail"><img src="img/tel-small-2.png" alt="Миниатюра 2" data-big="img/tel-big-2.png"/></div>
@@ -609,7 +620,7 @@
                       </div>
                       <div class="product-charact">
                         <div class="products-filter_rows_name">Смартфон</div>
-                        <div class="products-title">Samsung GT-I9301I GALAXY S 3</div>
+                        <h4 class="products-title"> <a href="#" class="products-title__url">Samsung GT-I9301I GALAXY S 3</a></h4>
                         <div class="products-info">
                           <div class="products-info__row">
                             <div class="products-info__row_left">Тип SIM-карты</div>
@@ -657,14 +668,14 @@
                           <div class="products-buy">
                             <input type="submit" value="В корзину" class="products-buy__button"/>
                           </div>
-                          <div class="products-availability"><i class="products-available"></i><span class="products-availability-text">В наличии</span></div>
+                          <div class="products-availability"><span class="products-availability-text">В наличии</span></div>
                         </div>
                       </div>
                     </li>
                     <li class="products-item">
                       <div class="product-info__left">
                         <div class="products-slider">
-                          <div class="products-slider__main-thumbnail"><img src="img/tel-big-1.png" alt="Samsung"/></div>
+                          <div class="products-slider__main-thumbnail"><img src="img/tel-big-1.png" alt="Samsung" class="products-slider__main-thumbnail_img"/></div>
                           <div class="products-slider__other-images">
                             <div class="products-slider__thumbnail active"><img src="img/tel-small-1.png" alt="Миниатюра 1" data-big="img/tel-big-1.png"/></div>
                             <div class="products-slider__thumbnail"><img src="img/tel-small-2.png" alt="Миниатюра 2" data-big="img/tel-big-2.png"/></div>
@@ -675,7 +686,7 @@
                       </div>
                       <div class="product-charact">
                         <div class="products-filter_rows_name">Смартфон</div>
-                        <div class="products-title">Samsung GT-I9301I GALAXY S 3</div>
+                        <h4 class="products-title"> <a href="#" class="products-title__url">Samsung GT-I9301I GALAXY S 3</a></h4>
                         <div class="products-info">
                           <div class="products-info__row">
                             <div class="products-info__row_left">Тип SIM-карты</div>
@@ -723,14 +734,14 @@
                           <div class="products-buy">
                             <input type="submit" value="В корзину" class="products-buy__button"/>
                           </div>
-                          <div class="products-availability"><i class="products-available"></i><span class="products-availability-text">В наличии</span></div>
+                          <div class="products-availability"><span class="products-availability-text">В наличии</span></div>
                         </div>
                       </div>
                     </li>
                     <li class="products-item">
                       <div class="product-info__left">
                         <div class="products-slider">
-                          <div class="products-slider__main-thumbnail"><img src="img/tel-big-1.png" alt="Samsung"/></div>
+                          <div class="products-slider__main-thumbnail"><img src="img/tel-big-1.png" alt="Samsung" class="products-slider__main-thumbnail_img"/></div>
                           <div class="products-slider__other-images">
                             <div class="products-slider__thumbnail active"><img src="img/tel-small-1.png" alt="Миниатюра 1" data-big="img/tel-big-1.png"/></div>
                             <div class="products-slider__thumbnail"><img src="img/tel-small-2.png" alt="Миниатюра 2" data-big="img/tel-big-2.png"/></div>
@@ -741,7 +752,7 @@
                       </div>
                       <div class="product-charact">
                         <div class="products-filter_rows_name">Смартфон</div>
-                        <div class="products-title">Samsung GT-I9301I GALAXY S 3</div>
+                        <h4 class="products-title"> <a href="#" class="products-title__url">Samsung GT-I9301I GALAXY S 3</a></h4>
                         <div class="products-info">
                           <div class="products-info__row">
                             <div class="products-info__row_left">Тип SIM-карты</div>
@@ -789,7 +800,7 @@
                           <div class="products-buy">
                             <input type="submit" value="В корзину" class="products-buy__button"/>
                           </div>
-                          <div class="products-availability"><i class="products-available"></i><span class="products-availability-text">В наличии</span></div>
+                          <div class="products-availability"><span class="products-availability-text">В наличии</span></div>
                         </div>
                       </div>
                     </li>
@@ -823,13 +834,13 @@
         </div>
         <footer class="footer">
           <div class="container">
-            <div class="footer__logo"><img src="img/footer-logo.png" alt="Лого"/></div>
+            <div class="footer__logo"><img src="img/footer-logo.png" alt="Лого" class="footer__logo_image"/></div>
             <div class="footer__navs">
               <div class="footer__navs_social">
                 <ul class="footer__navs_social-list">
-                  <li class="footer__navs_social-item"><a href="#" class="footer-facebook">Фейсбук<i class="footer__icon-facebook"></i></a></li>
-                  <li class="footer__navs_social-item"><a href="#" class="footer-vkontakte">Вконтакте<i class="footer__icon-vkontakte"></i></a></li>
-                  <li class="footer__navs_social-item"><a href="#" class="footer-twitter">Твиттер<i class="footer__icon-twitter"></i></a></li>
+                  <li class="footer__navs_social-item"><a href="#" class="footer__navs_url footer-facebook">Фейсбук</a></li>
+                  <li class="footer__navs_social-item"><a href="#" class="footer__navs_url footer-vkontakte">Вконтакте</a></li>
+                  <li class="footer__navs_social-item"><a href="#" class="footer__navs_url footer-twitter">Твиттер</a></li>
                 </ul>
               </div>
               <div class="footer__navs_menu">

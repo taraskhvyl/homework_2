@@ -17,7 +17,7 @@
                     .product-info__left
                         .products-slider
                             .products-slider__main-thumbnail
-                                img(src="img/tel-big-1.png", alt="Samsung")
+                                img(src="img/tel-big-1.png", class="products-slider__main-thumbnail_img", alt="Samsung")
                             .products-slider__other-images
                                 .products-slider__thumbnail.active
                                     img(src="img/tel-small-1.png", alt="Миниатюра 1", data-big="img/tel-big-1.png")
@@ -29,7 +29,8 @@
                             span.products-artikul__number 189238
                     .product-charact
                         .products-filter_rows_name Смартфон
-                        .products-title Samsung GT-I9301I GALAXY S 3
+                        h4.products-title 
+                            a(href="#" class="products-title__url") Samsung GT-I9301I GALAXY S 3
                         .products-info
                             - var productInfo = {'Тип SIM-карты': 'Micro-SIM','Количество SIM-карт': '1','Цвет': 'Белый','ОС': 'Android','Связь 3G': 'Есть','4G (LTE)': 'Нет','GPS-модуль': 'Есть'};
                                     each item, value in productInfo
@@ -37,7 +38,7 @@
                                             div(class="products-info__row_left") #{value}
                                             div(class="products-info__row_right") #{item}
                         .products-info_text Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц... 
-                            
+
                         .products-rating
                             ul(class="products-rating__list" data-rate="4")
                                 li.products-rating__item
@@ -52,7 +53,6 @@
                             .products-buy
                                 input(type="submit" class="products-buy__button" value="В корзину")
                             .products-availability
-                                i.products-available
                                 span.products-availability-text В наличии
 
     .pagination

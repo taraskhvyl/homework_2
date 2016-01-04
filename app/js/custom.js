@@ -15,15 +15,17 @@ $(document).ready(function() {
             $(this).addClass('active');
             $('.accordion ' + currentAttrValue).slideDown(300).addClass('open'); 
         }
-
-        
     });
     
     // инфа на две части
-    $('.information__content').columnize({
-        columns: 2,
-        width: 530
-    });
+    var columnTwo = $('.information__content');
+    
+    if(typeof columnTwo !== 'undefined'){
+        $(columnTwo).columnize({
+            columns: 2,
+            width: 530
+        });
+    }
     
     
     // выбор цвета в сайдбаре 
@@ -84,19 +86,22 @@ $(document).ready(function() {
     }
     
     // слайдер на цену в сайдабаре
+    var sliderBetween = $("#slider");
     
-    $("#slider").slider({
-        min: 0,
-        max: 30000,
-        step: 1,
-        range: true,
-        values: [100, 13000],
-        slide: function(event, ui) {
-            for (var i = 0; i < ui.values.length; ++i) {
-                $("input.sliderValue[data-index=" + i + "]").val(ui.values[i]);
+    if(typeof sliderBetween !== 'undefined'){
+        $(sliderBetween).slider({
+            min: 0,
+            max: 30000,
+            step: 1,
+            range: true,
+            values: [100, 13000],
+            slide: function(event, ui) {
+                for (var i = 0; i < ui.values.length; ++i) {
+                    $("input.sliderValue[data-index=" + i + "]").val(ui.values[i]);
+                }
             }
-        }
-    });
+        });
+    };
 
     $("input.sliderValue").change(function() {
         var $this = $(this);
@@ -104,11 +109,14 @@ $(document).ready(function() {
     });
 
     // select 
-    $('.head-filter__select').select2({
-        minimumResultsForSearch: -1,
-        width: '145px'
-    });
-
+    var selectCustom = $('.head-filter__select');
+    
+    if(typeof selectCustom !== 'undefined'){
+        $(selectCustom).select2({
+            minimumResultsForSearch: -1,
+            width: '145px'
+        });
+    };
 });
 
 

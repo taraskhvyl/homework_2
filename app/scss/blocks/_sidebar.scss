@@ -9,7 +9,6 @@
         border: 1px solid #dee1e4;
         border-radius: 5px;
         margin-bottom: 40px;
-        margin-top: 30px;
         &__item:first-child .sidebar-filter__url{
             border-top: 0;
         }
@@ -22,6 +21,13 @@
             &:hover {
                 background-color: #d9e5ea;
                 color: #5d656c;
+                border-top: 1px solid darken(#dee1e4, 10%);
+            }
+            
+            &.active {
+                background-color: #d9e5ea;
+                color: #5d656c;
+                border-top: 1px solid darken(#dee1e4, 20%);
             }
         }
     }
@@ -32,6 +38,7 @@
     background-color: rgba(255, 255, 255, 0.6);
     border: 1px solid #dee1e4;
     border-radius: 5px;
+    margin-bottom: 30px;
     box-sizing: border-box;
     
     &__heading{
@@ -187,6 +194,7 @@
     cursor: default;
     outline: none;
     -ms-touch-action: none;
+    cursor: pointer;
     touch-action: none;
 }
 .ui-slider .ui-slider-range {

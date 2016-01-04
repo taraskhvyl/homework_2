@@ -31,10 +31,15 @@
     &__logo {
         float: left;
         margin-top: 35px;
+        width: 238px;
+        
+        &_image {
+            max-width: 100%;
+        }
     }
     &__navs{
         float: right;
-        width: 55%;
+        width: 54%;
         
         &_social {
             @include clearfix;
@@ -50,16 +55,15 @@
                 border-radius: 50px;
                 position: relative;
                 margin-left: 25px;
-
+                
+                &:first-child {
+                    margin-left: 0;
+                }
+                
                 a {
                     display: block; 
                     height: 100%;
                     @include hide-text;
-
-                    i {
-                        display: block;
-                        @include center;
-                    }
                 }
             }
         }
@@ -77,6 +81,11 @@
                 display: inline-block;
                 line-height: 36px;
                 margin-left: 25px;
+                position: relative;
+                
+                &:first-child {
+                    margin-left: 0;
+                }
             }
             &-url {
                 text-decoration: underline;
@@ -87,13 +96,20 @@
             }
         }
     }
-    &__icon-facebook {
+    
+    &__navs_url:before {
+        content: '';
+        display: block;
+        @include center;
+    }
+    
+    &-facebook:before {
         @include sprite($footer-facebook);
     }
-    &__icon-vkontakte {
+    &-vkontakte:before {
         @include sprite($footer-vkontakte);
     }
-    &__icon-twitter {
+    &-twitter:before {
         @include sprite($footer-twitter);
     }
     

@@ -142,7 +142,7 @@ gulp.task('sprites', function() {
                 cssName: '_sprite.scss',
                 imgPath: '../img/sprite.png',//Путь прописаный в CSS как Background-image
                 cssFormat: 'scss',
-                padding: 4,
+                padding: 5,
                 algorithm: 'binary-tree',
             }));
     spriteData.img.pipe(gulp.dest(middle.images)); // путь, куда сохраняем картинку
