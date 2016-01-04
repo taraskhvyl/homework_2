@@ -425,6 +425,9 @@ label {
   margin: 0;
   text-align: left;
   width: 220px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
